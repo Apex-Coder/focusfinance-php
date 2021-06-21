@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e392eef2d242a6868982f2306aa70280",
+    "content-hash": "faa8f7bad57273336c78770932b954ca",
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -9954,7 +9954,15 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "symfony/twig-bundle": 20,
+        "symfony/browser-kit": 20,
+        "symfony/css-selector": 20,
+        "symfony/debug-bundle": 20,
+        "symfony/stopwatch": 20,
+        "symfony/var-dumper": 20,
+        "symfony/web-profiler-bundle": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
