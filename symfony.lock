@@ -85,14 +85,62 @@
     "egulias/email-validator": {
         "version": "3.1.1"
     },
+    "fig/http-message-util": {
+        "version": "1.1.5"
+    },
+    "firebase/php-jwt": {
+        "version": "v5.3.0"
+    },
     "friendsofphp/proxy-manager-lts": {
         "version": "v1.0.5"
+    },
+    "google/auth": {
+        "version": "v1.15.1"
+    },
+    "google/cloud-core": {
+        "version": "v1.42.1"
+    },
+    "google/cloud-storage": {
+        "version": "v1.23.2"
+    },
+    "google/crc32": {
+        "version": "v0.1.0"
+    },
+    "guzzlehttp/guzzle": {
+        "version": "7.3.0"
+    },
+    "guzzlehttp/promises": {
+        "version": "1.4.1"
+    },
+    "guzzlehttp/psr7": {
+        "version": "1.8.2"
+    },
+    "kreait/clock": {
+        "version": "1.1.0"
+    },
+    "kreait/firebase-bundle": {
+        "version": "2.4.0"
+    },
+    "kreait/firebase-php": {
+        "version": "5.20.1"
+    },
+    "kreait/firebase-tokens": {
+        "version": "1.15.0"
     },
     "laminas/laminas-code": {
         "version": "4.4.0"
     },
+    "lcobucci/clock": {
+        "version": "2.0.0"
+    },
+    "lcobucci/jwt": {
+        "version": "4.0.3"
+    },
     "monolog/monolog": {
         "version": "2.2.0"
+    },
+    "mtdowling/jmespath.php": {
+        "version": "2.6.1"
     },
     "myclabs/deep-copy": {
         "version": "1.10.2"
@@ -156,11 +204,29 @@
     "psr/event-dispatcher": {
         "version": "1.0.0"
     },
+    "psr/http-client": {
+        "version": "1.0.1"
+    },
+    "psr/http-message": {
+        "version": "1.0.1"
+    },
     "psr/link": {
         "version": "1.0.0"
     },
     "psr/log": {
         "version": "1.1.4"
+    },
+    "psr/simple-cache": {
+        "version": "1.0.1"
+    },
+    "ralouphie/getallheaders": {
+        "version": "3.0.3"
+    },
+    "riverline/multipart-parser": {
+        "version": "2.0.8"
+    },
+    "rize/uri-template": {
+        "version": "0.3.3"
     },
     "sebastian/cli-parser": {
         "version": "1.0.1"
