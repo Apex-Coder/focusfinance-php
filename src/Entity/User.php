@@ -4,11 +4,13 @@ namespace App\Entity;
 
 use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
+ * @UniqueEntity(fields={"email"}, message="There is already an account with this email")
  */
 class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
@@ -40,26 +42,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      */
     private $password;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $accountType;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $expenseType;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $incomeType;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $savingType;
-
     // Getter Functions
     public function getId(): ?int
     {
@@ -76,26 +58,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->username;
     }
 
-    public function getAccountType(): ?string
-    {
-        return $this->username;
-    }
-
-    public function getExpenseType(): ?string
-    {
-        return $this->username;
-    }
-
-    public function getIncomeType(): ?string
-    {
-        return $this->username;
-    }
-
-    public function getSavingType(): ?string
-    {
-        return $this->username;
-    }
-
     // Setter Functions
     public function setEmail(string $email): self
     {
@@ -107,34 +69,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setUsername(string $username): self
     {
         $this->username = $username;
-
-        return $this;
-    }
-
-    public function setAccountType(string $accountType): self
-    {
-        $this->accountType = $accountType;
-
-        return $this;
-    }
-
-    public function setExpenseType(string $expenseType): self
-    {
-        $this->expenseType = $expenseType;
-
-        return $this;
-    }
-
-    public function setIncomeType(string $incomeType): self
-    {
-        $this->incomeType = $incomeType;
-
-        return $this;
-    }
-
-    public function setSavingType(string $savingType): self
-    {
-        $this->savingType = $savingType;
 
         return $this;
     }
