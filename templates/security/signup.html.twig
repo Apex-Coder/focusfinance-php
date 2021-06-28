@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Welcome!{% endblock %}
+
+{% block body %}
+{# <form method="post">
+</form> #}
+{# {{ form(form) }} #}
+
+    {# {{ form_start(form) }}
+        <div>
+            {{ form_errors(form) }}
+        </div>
+        <div class="row">
+            <div class="col">
+                {{ form_row(form.roles) }}
+            </div>
+        </div>
+    {{ form_end(form) }} #}
+    <form action="" method="post">
+        {{ form(form) }}
+        {# <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}"> #}
+
+        <h1 class="h3 mb-3 font-weight-normal">Please sign up</h1>
+        <label for="username">Username</label><br>
+        <input type="text" id="username" class="form-control" name="username" required><br>
+
+        <label for="email">Email</label><br>
+        <input type="email" id="email" class="form-control" name="email" required><br>
+
+        <label for="password">Password</label><br>
+        <input type="password" id="password" class="form-control" name="password" required><br>
+
+        <input id="submit" class="btn btn-lg btn-primary" type="submit" value="Submit">
+    </form>
+{% endblock %}
