@@ -7,16 +7,39 @@
         <div class="alert alert-danger" role="alert">{{ flashError }}</div>
     {% endfor %}
 
-    <h1>Register</h1>
+    <div class="center">
+        <h1>Sign Up</h1>
 
-    {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.username) }}
-        {{ form_row(registrationForm.email) }}
-        {{ form_row(registrationForm.plainPassword, {
-            label: 'Password'
-        }) }}
-        {{ form_row(registrationForm.agreeTerms) }}
+        {{ form_start(registrationForm) }}
+            <div class="text-field">
+                {{ form_widget(registrationForm.username) }}
+                <span></span>
+                {{ form_label(registrationForm.username, 'Username') }}
+            </div>
 
-        <button type="submit" class="btn">Register</button>
-    {{ form_end(registrationForm) }}
+            
+            <div class="text-field">
+                {{ form_widget(registrationForm.email) }}
+                <span></span>
+                {{ form_label(registrationForm.email, 'Email') }}
+            </div>
+            
+            <div class="text-field">
+                {{ form_widget(registrationForm.plainPassword) }}
+                <span></span>
+                {{ form_label(registrationForm.email, 'Password') }}
+            </div>
+
+            {{ form_row(registrationForm.agreeTerms, {'attr': {'class': 'agreementTerms'}}) }}
+
+            <button type="submit" class="signin-btn">Sign Up</button>
+            <div class="login-link">
+                Already a member? <a href="{{path('app_login')}}">Login</a>
+            </div>
+        {{ form_end(registrationForm) }}
+    </div>
+{% endblock %}
+{% block stylesheets %}
+     {{ parent() }}
+     {{ encore_entry_link_tags('app') }}
 {% endblock %}
