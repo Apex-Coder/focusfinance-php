@@ -1,0 +1,17 @@
+@import "form-style.css";
+:root {
+
+    --navBarBackground: #438ae8;
+    --testingBackground: #23232e;
+    --textWhite: #ffffff;
+  }
+body {
+    margin: 0;
+    padding: 0;
+    background-color: lightgray;
+    background: #ececec;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    height: 100vh;
+    overflow: hidden;
+}
