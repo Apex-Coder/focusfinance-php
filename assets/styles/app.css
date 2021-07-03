@@ -1,4 +1,5 @@
 @import "form-style.css";
+@import "navbar.css";
 :root {
 
     --navBarBackground: #438ae8;
@@ -14,4 +15,32 @@ body {
     font-weight: 400;
     height: 100vh;
     overflow: hidden;
+}
+
+.content-wrapper {
+    position: relative;
+    margin: 1em auto;
+    top: 12vh;
+    max-width: 800px; 
+    width: 95%; 
+    font: 18px/1.5 sans-serif;
+}
+
+@media screen and (max-width: 1024px) {
+    .content-wrapper {
+        top: 4vh;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .content-wrapper {
+        top: 6vh;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .content-wrapper {
+        top: 8vh;
+        width: 100%;
+    }
 }

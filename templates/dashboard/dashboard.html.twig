@@ -1,0 +1,42 @@
+{% extends 'default_base_with_nav.html.twig' %}
+
+{% block title %}Hello DashboardController!{% endblock %}
+
+{% block body %}
+{% block navbar %}
+    <nav>
+        <input id="nav-toggle" type="checkbox" />
+        <div class="logo">Focus <strong>Finance</strong></div>
+        <ul class="links">
+            <li><a href="{{ path('dashboard') }}">Home</a></li>
+            <li><a href="#">Expenses</a></li>
+            <li><a href="#">Savings</a></li>
+            <li><a href="#">Incomes</a></li>
+            <li><a href="#">Settings</a></li>
+            {% if app.user %}
+                <li><a href="{{ path('app_logout') }}">Logout</a></li>
+            {% endif %}
+        </ul>
+        <label for="nav-toggle" class="icon-burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </label>
+    </nav>
+{% endblock %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="content-wrapper">
+    <h1>Welcome {{ app.user.username }}</h1>
+
+
+    {% if app.user %}
+        <div class="mb-3">
+            You are logged in as {{ app.user.username }}, {# <a href="{{ path('app_logout') }}">Logout</a> #}
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

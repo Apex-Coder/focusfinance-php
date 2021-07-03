@@ -10,3 +10,9 @@ import './styles/app.css';
 
 // start the Stimulus application
 import './bootstrap';
+
+// document.querySelector("#nav-toggle").checked ^= 1
+
+// $( ".links li" ).click(function() {
+//   alert( "Handler for .click() called." );
+// });
