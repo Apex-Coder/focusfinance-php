@@ -5,10 +5,10 @@
         <div class="logo">Focus <strong>Finance</strong></div>
         <ul class="links">
             <li><a href="{{ path('dashboard') }}">Home</a></li>
-            <li><a href="#">Expenses</a></li>
-            <li><a href="#">Savings</a></li>
-            <li><a href="#">Incomes</a></li>
-            <li><a href="#">Settings</a></li>
+            <li><a href="{{ path('expenses') }}">Expenses</a></li>
+            <li><a href="{{ path('savings') }}">Savings</a></li>
+            <li><a href="{{ path('income') }}">Incomes</a></li>
+            <li><a href="{{ path('settings') }}">Settings</a></li>
             {% if app.user %}
                 <li><a href="{{ path('app_logout') }}">Logout</a></li>
             {% endif %}
