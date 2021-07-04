@@ -1,6 +1,26 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-    {% block navabr %}
+    <nav>
+        <input id="nav-toggle" type="checkbox" />
+        <div class="logo">Focus <strong>Finance</strong></div>
+        <ul class="links">
+            <li><a href="{{ path('dashboard') }}">Home</a></li>
+            <li><a href="#">Expenses</a></li>
+            <li><a href="#">Savings</a></li>
+            <li><a href="#">Incomes</a></li>
+            <li><a href="#">Settings</a></li>
+            {% if app.user %}
+                <li><a href="{{ path('app_logout') }}">Logout</a></li>
+            {% endif %}
+        </ul>
+        <label for="nav-toggle" class="icon-burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </label>
+    </nav>
+
+    {% block content %}
     {% endblock %}
 {% endblock %}
 {% block stylesheets %}
